@@ -1,0 +1,16 @@
+{
+  "name": "@pet/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vitest": "^3.1.3"
+  }
+}
