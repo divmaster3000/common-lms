@@ -46,7 +46,7 @@ const main = () => {
   );
   const packagesDirectories = getDirectories(
     `${globalDirectory}/${PACKAGES_DIRECTORY}`
-  );
+  ).map((item) => `packages/${item}`);
 
   for (let dir of [...apps, packagesDirectories]) {
     const packageName = getPackageName(globalDirectory, dir);
