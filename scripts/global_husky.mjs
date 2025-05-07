@@ -1,7 +1,7 @@
 import fs from "node:fs";
 
 const globalDirectory = process.cwd();
-const systemDirectories = ["node_modules", "scripts"];
+const systemDirectories = ["node_modules", "scripts", "packages"];
 
 const getDirectories = (source) =>
   fs
