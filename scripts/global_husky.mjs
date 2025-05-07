@@ -37,8 +37,6 @@ const runScript = (packageName) => {
   });
 };
 
-const getAllPackagesName = () => {};
-
 const main = () => {
   const globalDirectory = process.cwd();
   const apps = getDirectories(globalDirectory).filter(
