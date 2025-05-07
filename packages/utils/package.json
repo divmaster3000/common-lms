@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "pre-commit": "echo test"
   },
   "keywords": [],
   "author": "",

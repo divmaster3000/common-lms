@@ -5,9 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test:all": "pnpm -r test",
-    "start-dashboard": "pnpm --filter dashboard dev"
+    "start-dashboard": "pnpm --filter dashboard dev",
+    "pre-commit": "node ./scripts/global_husky.mjs",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  },
+  "dependencies": {
+    "node": "^24.0.0"
+  }
 }
