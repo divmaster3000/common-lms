@@ -11,12 +11,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
   "dependencies": {
     "@chakra-ui/react": "^3.17.0",
     "@emotion/react": "^11.14.0",
-    "@storybook/addon-themes": "^8.6.12",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "@storybook/addon-themes": "^8.6.12"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3",
