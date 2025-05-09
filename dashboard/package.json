@@ -13,6 +13,7 @@
   "dependencies": {
     "@chakra-ui/react": "^3.17.0",
     "@pet/utils": "workspace:*",
+    "@tanstack/react-router": "^1.120.3",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "eslint-config-prettier": "^10.1.3",
     "eslint-config-standard-with-typescript": "^43.0.1",
