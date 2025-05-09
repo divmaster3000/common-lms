@@ -1,14 +1,14 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import { capitalizeFirstLetter } from '@pet/utils'
-import { Button, lightTheme } from 'ui'
+import { RouterProvider } from '@tanstack/react-router'
+import { lightTheme } from 'ui'
+
+import { router } from './route/root'
 
 function App() {
-  const title = capitalizeFirstLetter('test my script')
   return (
     <>
-      <p>{title}</p>
       <ChakraProvider value={lightTheme}>
-        <Button onClick={() => alert('Clicked!')}>Hello from UI</Button>
+        <RouterProvider router={router} />
       </ChakraProvider>
     </>
   )
