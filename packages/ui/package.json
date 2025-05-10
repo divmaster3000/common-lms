@@ -21,6 +21,7 @@
     "@storybook/addon-themes": "^8.6.12"
   },
   "devDependencies": {
+    "@chakra-ui/storybook-addon": "^5.2.5",
     "@chromatic-com/storybook": "^3",
     "@eslint/js": "^9.25.0",
     "@storybook/addon-essentials": "^8.6.12",
