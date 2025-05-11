@@ -121,6 +121,9 @@ importers:
       '@storybook/addon-themes':
         specifier: ^8.6.12
         version: 8.6.12(storybook@8.6.12(prettier@3.5.3))
+      extend-theme:
+        specifier: link:@chakra-ui/react/extend-theme
+        version: link:@chakra-ui/react/extend-theme
       react:
         specifier: ^19.1.0
         version: 19.1.0
