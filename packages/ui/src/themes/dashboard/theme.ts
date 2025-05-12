@@ -148,6 +148,13 @@ const TEXT_STYLES = {
   },
 };
 
+const GLOBAL_CSS = {
+  html: {
+    padding: 0,
+    margin: 0,
+  },
+};
+
 export const lightTheme = createSystem(defaultConfig, {
   theme: {
     tokens: {
@@ -170,6 +177,7 @@ export const lightTheme = createSystem(defaultConfig, {
       ...TEXT_STYLES,
     },
   },
+  globalCss: GLOBAL_CSS,
 });
 
 export const darkTheme = createSystem(defaultConfig, {
@@ -194,4 +202,5 @@ export const darkTheme = createSystem(defaultConfig, {
       ...TEXT_STYLES,
     },
   },
+  globalCss: GLOBAL_CSS,
 });
