@@ -153,6 +153,10 @@ const GLOBAL_CSS = {
     padding: 0,
     margin: 0,
   },
+  body: {
+    padding: 0,
+    margin: 0,
+  },
 };
 
 export const lightTheme = createSystem(defaultConfig, {

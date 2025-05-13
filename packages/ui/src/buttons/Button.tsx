@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Button as ChakraButton,
   type ButtonProps as ChakraButtonProps,
+  defineRecipe,
+  useRecipe,
 } from "@chakra-ui/react";
 
 type ButtonVariant = "contained" | "outlined" | "text";
@@ -43,11 +46,42 @@ function mapResponsiveValue<TFrom extends string, TTo>(
   return undefined;
 }
 
+const buttonRecipe = defineRecipe({
+  base: {
+    display: "flex",
+    width: "100%",
+    borderRadius: "8px",
+  },
+  variants: {
+    size: {
+      sm: {
+        height: "36px",
+        padding: "7.5px 10px",
+      },
+      md: {
+        height: "44px",
+        padding: "10px 16px",
+      },
+      lg: {
+        padding: "14px 22px",
+        height: "52px",
+      },
+    },
+    styles: {
+      primary: {},
+    },
+  },
+});
+
 export const Button = (props: ButtonProps) => {
+  console.log("props", props);
   const { size, variant, ...rest } = props;
 
   const currentSize = mapResponsiveValue(size, sizeMap);
   const currentVariant = mapResponsiveValue(variant, variantMap);
-
-  return <ChakraButton size={currentSize} variant={currentVariant} {...rest} />;
+  const recipe = useRecipe({ recipe: buttonRecipe });
+  const styles = recipe({
+    size: currentSize as any,
+  });
+  return <ChakraButton css={styles} variant={currentVariant} {...rest} />;
 };
