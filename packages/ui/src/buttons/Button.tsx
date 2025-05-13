@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Button as ChakraButton,
   type ButtonProps as ChakraButtonProps,
@@ -52,7 +53,6 @@ const buttonRecipe = defineRecipe({
     borderRadius: "8px",
   },
   variants: {
-    visual: {},
     size: {
       sm: {
         height: "36px",
@@ -67,16 +67,21 @@ const buttonRecipe = defineRecipe({
         height: "52px",
       },
     },
+    styles: {
+      primary: {},
+    },
   },
 });
 
 export const Button = (props: ButtonProps) => {
+  console.log("props", props);
   const { size, variant, ...rest } = props;
 
   const currentSize = mapResponsiveValue(size, sizeMap);
   const currentVariant = mapResponsiveValue(variant, variantMap);
   const recipe = useRecipe({ recipe: buttonRecipe });
-  const styles = recipe({ size: currentSize });
-
-  return <ChakraButton size={currentSize} variant={currentVariant} {...rest} />;
+  const styles = recipe({
+    size: currentSize as any,
+  });
+  return <ChakraButton css={styles} variant={currentVariant} {...rest} />;
 };
